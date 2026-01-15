@@ -10,10 +10,16 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("API is running 🚀");
+});
 
 app.use("/api/events", require("./routes/eventrouter"));
 app.use("/api/auth", require("./routes/authroutes"));
 
+app.get("/test", (req, res) => {
+  res.json({ message: "Backend working" });
+});
 
 
 
