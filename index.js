@@ -17,9 +17,7 @@ app.get("/", (req, res) => {
 app.use("/api/events", require("./routes/eventrouter"));
 app.use("/api/auth", require("./routes/authroutes"));
 
-app.get("/test", (req, res) => {
-  res.json({ message: "Backend working" });
-});
+
 
 
 
